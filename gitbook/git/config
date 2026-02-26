@@ -1,0 +1,15 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://github.com/ant-lab-ru/ant-mcu
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[gc]
+	auto = 0
+[http "https://github.com/"]
+	extraheader = AUTHORIZATION: basic eC1hY2Nlc3MtdG9rZW46Z2l0aHViX3BhdF8xMUFDRVM3Q0kwSUtQN0dEeTEyQ3pWX2tDSGtEOVF4akxQSnNSMlZNemoxWWgya1ZoYmxyS2Y2Z3pqalE1VUFwM0hYSkpOTUNVTHFjS3doQldv
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
