@@ -1,0 +1,13 @@
+{
+  "name": "obsidian-to-gitbook",
+  "version": "1.0.0",
+  "description": "Convert Obsidian vault to GitBook",
+  "main": "gitbook.js",
+  "scripts": {
+    "build:gitbook": "node gitbook.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^11.0.0"
+  }
+}
