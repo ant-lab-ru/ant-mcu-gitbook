@@ -41,8 +41,17 @@ jobs:
         working-directory: ./src
         run: npm run build:gitbook
 
-      - name: Commit changes
-        uses: EndBug/add-and-commit@v7
-        with:
-          message: '🤖 Build for GitBook'
-          add: 'gitbook'
+      - name: Commit and push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.DEPLOY_PAT }}
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add gitbook
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Build for GitBook"
+            git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/ant-lab-ru/ant-mcu-gitbook.git
+            git push origin main
+          fi
