@@ -1,6 +1,14 @@
 const fse = require('fs-extra');
 
+/**
+ *  Rename files and folders in a project to match GitBook standard
+ * 
+ * @param index {Object} The index to rename
+ * @param folder {String} Project folder to use
+ */
 async function renameProject(folder, index) {
+  // ToDo: If no index parsed, create one.
+
   try {
     const nodes = Object.keys(index);
 
@@ -11,6 +19,7 @@ async function renameProject(folder, index) {
         await renameProject(`${folder}/${node.name}`, node.content);
       }
 
+      // Rename node
       if (`${folder}/${node.name}` !== `${folder}/${nodes[i]}`) {
         await fse.move(`${folder}/${node.name}`, `${folder}/${nodes[i]}`);
       }

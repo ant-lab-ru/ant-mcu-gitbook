@@ -1,13 +1,23 @@
 {
-  "name": "obsidian-to-gitbook",
+  "name": "test-obsidian",
   "version": "1.0.0",
-  "description": "Convert Obsidian vault to GitBook",
-  "main": "gitbook.js",
+  "description": "",
+  "main": "src/index.js",
   "scripts": {
-    "build:gitbook": "node gitbook.js"
+    "build:gitbook": "node gitbook.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodingCarlos/test-obsidian.git"
+  },
+  "author": "@CodingCarlos",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CodingCarlos/test-obsidian/issues"
+  },
+  "homepage": "https://github.com/CodingCarlos/test-obsidian#readme",
   "dependencies": {
-    "fs-extra": "^11.0.0"
+    "fs-extra": "^10.0.0"
   }
 }
