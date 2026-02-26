@@ -46,3 +46,4 @@ jobs:
         with:
           message: 'Build for GitBook'
           add: 'gitbook'
+          github_token: ${{ secrets.DEPLOY_PAT }}
